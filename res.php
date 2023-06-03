@@ -6,6 +6,9 @@
 	<link href="styles.css" rel="stylesheet">
 	<title>Wyniki</title>
 	<meta name="author" value="Krzysztof Jurkowski">
+	<?php
+	$p = 0;
+	?>
 </head>
 
 <body>
@@ -14,7 +17,12 @@
 		<li>
 			Jak miał na imię pierwszy król Polski?<br>
 			Prawidłowa odpowiedź: Bolesław I Chrobry<br>
-			Ty wpisałeś: <?php echo $_POST['1']; ?>
+			Ty wpisałeś: <?php
+							echo $_POST['1'];
+							if ($_POST['1'] == "Bolesław I Chrobry") {
+								$p += 1;
+							}
+							?>
 		</li>
 		<li>
 			Które z wymienionych miast było pierwszą stolicą Polski?<br>
@@ -23,6 +31,7 @@
 							switch ($_POST['2']) {
 								case 'a':
 									echo "Gniezno";
+									$p += 1;
 									break;
 								case 'b':
 									echo "Kraków";
@@ -53,6 +62,9 @@
 											break;
 									}
 								}
+								if (in_array('b', $_POST['3']) && in_array('c', $_POST['3'])) {
+									$p += 1;
+								}
 								?></ul>
 		</li>
 		<li>
@@ -62,6 +74,7 @@
 							switch ($_POST['4']) {
 								case 'a':
 									echo "Litwy";
+									$p += 1;
 									break;
 								case 'b':
 									echo "Węgier";
@@ -73,6 +86,7 @@
 							?>
 		</li>
 	</ol>
+	Uzyskano <?php echo $p; ?>/4 punktów.
 </body>
 
 </html>

@@ -11,16 +11,20 @@
 <body>
 	<h1>Test z historii</h1>
 	<form method="post" action="res.php">
+		<div style="text-align:center">
+			<label for="fn">Podaj swoje imię:</label><input type="text" id="fn" name="fn" required><br>
+			<label for="sn">Podaj swoje nazwisko:</label><input type="text" id="sn" name="sn" required><br>
+		</div>
 		<ol>
 			<li>
 				<label for="1">Jak miał na imię pierwszy król Polski?</label><br>
-				<input type="text" id="1" name="1" required>
+				<input type="text" id="1" name="1">
 			</li>
 			<li>
 				<label for="2">Które z wymienionych miast było pierwszą stolicą Polski?</label><br>
-				<input type="radio" name="2" id="2a" value="a" required><label for="2a">Gniezno</label><br>
-				<input type="radio" name="2" id="2b" value="b" required><label for="2b">Kraków</label><br>
-				<input type="radio" name="2" id="2c" value="c" required><label for="2c">Warszawa</label>
+				<input type="radio" name="2" id="2a" value="a"><label for="2a">Gniezno</label><br>
+				<input type="radio" name="2" id="2b" value="b"><label for="2b">Kraków</label><br>
+				<input type="radio" name="2" id="2c" value="c"><label for="2c">Warszawa</label>
 			</li>
 			<li>
 				<label for="3">Które z wymienionych osób były królami Polski?</label><br>
@@ -30,7 +34,7 @@
 			</li>
 			<li>
 				<label for="4">Jakiego państwa księciem był Jagieło, zanim objął tron Polski?</label><br>
-				<select name="4" id="4" required>
+				<select name="4" id="4">
 					<option></option>
 					<option value="a">Litwy</option>
 					<option value="b">Węgier</option>
